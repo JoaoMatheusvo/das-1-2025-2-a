@@ -8,3 +8,9 @@ O - Open/Closed Principle (Princípio Aberto/Fechado): Software deve estar abert
 L - Liskov Substitution Principle (Princípio da Substituição de Liskov): Objetos de uma classe derivada devem poder substituir objetos da classe base sem alterar o funcionamento do programa.
 I - Interface Segregation Principle (Princípio da Segregação de Interfaces): Muitas interfaces específicas são melhores do que uma interface geral.
 D - Dependency Inversion Principle (Princípio da Inversão de Dependência): Dependa de abstrações, não de implementações concretas.
+
+O Princípio da Inversão de Dependência diz que módulos de alto nível não devem depender diretamente de módulos de baixo nível, ambos devem depender de abstrações (interfaces ou classes abstratas). Além disso, abstrações não devem depender de detalhes, mas sim os detalhes dependerem das abstrações. Isso promove flexibilidade e reduz o acoplamento no sistema.
+
+É recomendado criar funcionalidades combinando objetos (composição) em vez de estender classes (herança) sempre que possível. Isso evita acoplamento rígido, facilita a reutilização de código e torna o sistema mais flexível para mudanças, já que o comportamento pode ser alterado trocando componentes, sem modificar hierarquias de classes.
+
+O Princípio de Demeter, também chamado de Princípio do Menor Conhecimento, estabelece que um método deve interagir apenas com objetos diretamente relacionados a ele: sua própria classe, objetos recebidos como parâmetros, objetos criados pelo próprio método ou atributos da classe. Essa prática reduz o acoplamento e preserva o encapsulamento, evitando dependências desnecessárias e aumentando a flexibilidade do código, prevenindo chamadas encadeadas que expõem detalhes internos e fragilizam o sistema.
