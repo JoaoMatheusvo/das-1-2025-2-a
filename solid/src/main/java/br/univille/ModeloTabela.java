@@ -24,7 +24,7 @@ public class ModeloTabela extends AbstractTableModel{
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        return "Java lindo";
+        return "Java legal";
     }
 
 }

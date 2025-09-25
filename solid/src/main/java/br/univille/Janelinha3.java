@@ -1,13 +1,14 @@
 package br.univille;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
 
 public class Janelinha3 extends JFrame{
 
