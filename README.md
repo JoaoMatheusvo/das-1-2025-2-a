@@ -109,3 +109,19 @@ Formação do conhecimento de um arquiteto modelo T: A formação do arquiteto m
 - Após esse intervalo, o circuito entra no estado Half-Open (meio-aberto), onde libera um número limitado de requisições para testar se o serviço externo voltou ao normal. Se essas tentativas forem bem-sucedidas, o circuito retorna ao estado Closed, restabelecendo o fluxo normal de requisições. Caso contrário, volta para o estado Open, reiniciando o ciclo.
   
 Dessa forma, o Circuit Breaker assegura uma comunicação mais estável e eficiente em sistemas distribuídos, melhorando a tolerância a falhas e evitando que problemas isolados comprometam a aplicação inteira.
+
+## Aula 06/10
+
+### Definições das características arquiteturais:
+As características arquiteturais (também chamadas de atributos de qualidade ou quality attributes) são propriedades não funcionais que determinam o comportamento e a qualidade de um sistema de software. Enquanto os requisitos funcionais descrevem o que o sistema faz, as características arquiteturais descrevem como ele faz, influenciando diretamente as decisões de projeto e a estrutura da arquitetura.
+
+Essas características são fundamentais porque determinam a capacidade do sistema de atender às expectativas de desempenho, segurança, manutenibilidade, disponibilidade, escalabilidade e usabilidade, entre outras. Elas não se manifestam em funcionalidades específicas, mas em comportamentos emergentes do sistema como um todo.
+
+O livro destaca que as características arquiteturais devem ser explicitamente identificadas, documentadas e priorizadas desde as fases iniciais do desenvolvimento, pois impactam a escolha de tecnologias, padrões de projeto e a própria organização dos componentes.
+Por exemplo, uma aplicação que prioriza desempenho pode exigir cache, balanceamento de carga e processamento assíncrono; já uma aplicação que prioriza segurança pode adotar autenticação forte, criptografia e isolamento de componentes.
+
+Os autores classificam as características em três categorias principais:
+- Executáveis em tempo de execução – como desempenho, disponibilidade, segurança e escalabilidade.
+- Relativas à evolução do sistema – como manutenibilidade, modularidade, testabilidade e extensibilidade.
+- De negócio – como tempo de mercado, custo de desenvolvimento e reutilização.
+
