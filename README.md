@@ -125,3 +125,13 @@ Os autores classificam as características em três categorias principais:
 - Relativas à evolução do sistema – como manutenibilidade, modularidade, testabilidade e extensibilidade.
 - De negócio – como tempo de mercado, custo de desenvolvimento e reutilização.
 
+## Aula 07/10
+
+### CQRS
+CQRS (Command Query Responsibility Segregation) é um padrão arquitetural que propõe a separação das responsabilidades de leitura (queries) e escrita (commands) em um sistema. Em vez de usar o mesmo modelo para ambas as operações, como em arquiteturas CRUD tradicionais, CQRS divide esses dois aspectos, permitindo otimizações específicas para cada um.
+
+O modelo de escrita foca em manter a integridade dos dados e aplicar as regras de negócio, enquanto o de leitura é otimizado para desempenho e consultas eficientes. Em muitos casos, os dados de leitura são atualizados de forma assíncrona com base em eventos disparados pelas operações de escrita, o que pode gerar uma consistência eventual.
+
+Esse padrão é especialmente útil em sistemas complexos, com regras de negócio robustas e grande volume de leitura. Ele oferece vantagens como escalabilidade, desempenho aprimorado e melhor organização do código. No entanto, também traz desafios, como aumento da complexidade, necessidade de sincronização entre os modelos e custo de manutenção maior.
+
+Por isso, CQRS deve ser adotado com critério, especialmente quando os benefícios superam os custos de implementação.
