@@ -135,3 +135,43 @@ O modelo de escrita foca em manter a integridade dos dados e aplicar as regras d
 Esse padrão é especialmente útil em sistemas complexos, com regras de negócio robustas e grande volume de leitura. Ele oferece vantagens como escalabilidade, desempenho aprimorado e melhor organização do código. No entanto, também traz desafios, como aumento da complexidade, necessidade de sincronização entre os modelos e custo de manutenção maior.
 
 Por isso, CQRS deve ser adotado com critério, especialmente quando os benefícios superam os custos de implementação.
+
+## Aula 13/10
+
+### Retry Pattern 
+É um padrão usado para aumentar a resiliência de sistemas distribuídos, permitindo que operações com falhas temporárias sejam tentadas novamente antes de serem consideradas como falhas definitivas. Esse padrão é útil quando há falhas transitórias, como problemas de rede ou serviços externos instáveis, que podem ser resolvidas com uma nova tentativa.
+
+Estratégias Comuns:
+- Tentativas fixas: O sistema tenta um número predefinido de vezes.
+- Backoff exponencial: O tempo entre as tentativas aumenta exponencialmente para reduzir a sobrecarga no sistema.
+- Jitter: Introduz uma variação aleatória no tempo de espera entre tentativas para evitar picos simultâneos de reconexões.
+- Circuit Breaker combinado: Pode ser usado junto com o Retry Pattern para evitar tentativas contínuas em caso de falhas graves.
+
+Benefícios:
+- Resiliência: Permite que o sistema se recupere de falhas temporárias.
+- Redução de erros do usuário: Melhora a experiência, tentando novamente em vez de retornar erros.
+- Menor sobrecarga: Com backoff exponencial e jitter, o sistema evita sobrecarregar-se.
+
+Desafios:
+- Controle de recursos: Muitas tentativas podem aumentar a carga no sistema.
+- Falhas permanentes: O padrão não resolve falhas não transitórias.
+- Complexidade: Implementar de forma eficiente requer cuidados, como definir os limites e tempos adequados.
+
+## Aula 20/10
+
+### Estilo de Arquitetura em Camadas 
+É um estilo de arquitetura de software que organiza o sistema em camadas, onde cada camada tem uma responsabilidade específica, permitindo melhor modularização e manutenção.
+
+Camadas Comuns:
+- Camada de Apresentação: Interage com o usuário, exibindo dados e recebendo entradas.
+- Camada de Lógica de Negócio: Contém a lógica central e regras de negócio.
+- Camada de Acesso a Dados: Gerencia a comunicação com o banco de dados.
+- Camada de Infraestrutura (opcional): Lida com aspectos como segurança e comunicação externa.
+
+Vantagens:
+- Modularidade e Reusabilidade: Facilita a manutenção e permite reutilizar componentes.
+- Escalabilidade e Facilidade de Testes: Camadas podem ser escaladas e testadas independentemente.
+
+Desvantagens:
+- Sobrecarga de Comunicação: A interação entre camadas pode impactar a performance.
+- Rigidez: Mudanças podem exigir modificações em várias camadas.
