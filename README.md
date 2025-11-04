@@ -157,6 +157,13 @@ Desafios:
 - Falhas permanentes: O padrão não resolve falhas não transitórias.
 - Complexidade: Implementar de forma eficiente requer cuidados, como definir os limites e tempos adequados.
 
+### Fundamentos dos Padrões de Arquiteturas
+Os padrões de arquitetura de software representam soluções recorrentes para problemas comuns no projeto de sistemas complexos. Eles servem como modelos que orientam as decisões estruturais, promovendo reutilização, consistência e qualidade nas soluções arquiteturais. No livro Fundamentos da Arquitetura de Software: uma abordagem de engenharia, os autores destacam que compreender e aplicar esses padrões é essencial para garantir que o software atenda aos requisitos funcionais e não funcionais, como desempenho, escalabilidade, segurança e manutenibilidade.
+
+Entre os principais padrões abordados estão o Layered (em camadas), que organiza o sistema em níveis de responsabilidade; o Microkernel, adequado a sistemas extensíveis; o Event-Driven, voltado para aplicações reativas e assíncronas; o Microservices, que favorece escalabilidade e implantação independente; e o Space-Based Architecture, útil para sistemas que precisam lidar com alta carga e disponibilidade.
+
+A escolha de um padrão não deve ser feita de forma intuitiva, mas baseada em uma análise de trade-offs, considerando os objetivos de negócio e as restrições técnicas do projeto. Assim, o papel do arquiteto de software é equilibrar essas decisões, buscando alinhamento entre a arquitetura e as metas estratégicas da organização.
+
 ## Aula 20/10
 
 ### Estilo de Arquitetura em Camadas 
@@ -175,3 +182,21 @@ Vantagens:
 Desvantagens:
 - Sobrecarga de Comunicação: A interação entre camadas pode impactar a performance.
 - Rigidez: Mudanças podem exigir modificações em várias camadas.
+
+## Aula 27/10 e 28/10
+
+### Estilo de Arquitetura Pipeline
+O estilo de arquitetura Pipeline é um modelo estrutural que organiza o processamento de dados em uma sequência de etapas independentes, conhecidas como filtros, conectadas por canais de comunicação, chamados pipes. Cada filtro realiza uma transformação específica sobre os dados e repassa o resultado para o próximo estágio do pipeline. Esse estilo é amplamente utilizado em sistemas que exigem processamento contínuo, sequencial e modular de informações, como compiladores, processadores de dados e sistemas de streaming.
+
+O principal benefício desse estilo está na separação clara de responsabilidades e na facilidade de reuso e manutenção dos componentes. Cada filtro pode ser desenvolvido, testado e substituído de forma independente, o que favorece a evolução e extensibilidade do sistema. Além disso, o pipeline pode ser otimizado para paralelismo, permitindo que múltiplas etapas processem diferentes dados simultaneamente, aumentando o desempenho.
+
+Entretanto, o modelo apresenta limitações, como a latência acumulada em pipelines muito longos e a dificuldade de tratamento de erros entre estágios. O desempenho também pode ser comprometido quando há grande variação no tempo de processamento entre filtros, exigindo um balanceamento cuidadoso.
+
+## Aula 03/11 e 04/11
+
+### Estilo de Arquitetura Microkernel
+O estilo de arquitetura Microkernel é uma abordagem voltada à construção de sistemas que exigem alta extensibilidade e adaptabilidade. Nesse modelo, o sistema é dividido em dois elementos principais: o núcleo mínimo (microkernel), responsável pelas funcionalidades essenciais e de baixo nível, e os módulos externos (plug-ins ou servidores), que adicionam ou estendem capacidades específicas. Essa separação permite que o sistema evolua sem comprometer sua base central, tornando-o ideal para sistemas operacionais, plataformas de software e produtos com múltiplas versões ou configurações.
+
+O microkernel atua como o mediador de comunicação entre os componentes, fornecendo serviços fundamentais, como gerenciamento de processos, comunicação entre módulos e controle de recursos. Os plug-ins, por sua vez, implementam funcionalidades específicas e podem ser adicionados, atualizados ou removidos de forma dinâmica, o que promove flexibilidade e manutenibilidade.
+
+Entre as principais vantagens desse estilo estão a facilidade de extensão, a isolação de falhas — já que módulos defeituosos não comprometem o núcleo — e o suporte a personalização e portabilidade. Contudo, essa arquitetura também apresenta desafios, como maior complexidade de comunicação entre componentes e potenciais perdas de desempenho devido à troca de mensagens entre o núcleo e os módulos externos.
