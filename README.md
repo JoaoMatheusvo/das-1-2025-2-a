@@ -174,4 +174,4 @@ Vantagens:
 
 Desvantagens:
 - Sobrecarga de Comunicação: A interação entre camadas pode impactar a performance.
-- Rigidez: Mudanças podem exigir modificações em várias camadas. 
+- Rigidez: Mudanças podem exigir modificações em várias camadas.
