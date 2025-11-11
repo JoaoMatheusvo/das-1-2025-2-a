@@ -200,3 +200,12 @@ O estilo de arquitetura Microkernel é uma abordagem voltada à construção de 
 O microkernel atua como o mediador de comunicação entre os componentes, fornecendo serviços fundamentais, como gerenciamento de processos, comunicação entre módulos e controle de recursos. Os plug-ins, por sua vez, implementam funcionalidades específicas e podem ser adicionados, atualizados ou removidos de forma dinâmica, o que promove flexibilidade e manutenibilidade.
 
 Entre as principais vantagens desse estilo estão a facilidade de extensão, a isolação de falhas — já que módulos defeituosos não comprometem o núcleo — e o suporte a personalização e portabilidade. Contudo, essa arquitetura também apresenta desafios, como maior complexidade de comunicação entre componentes e potenciais perdas de desempenho devido à troca de mensagens entre o núcleo e os módulos externos.
+
+## Aula 10/11 e 11/11
+
+### Estilo de Arquitetura Microsserviços
+A arquitetura de Microsserviços é um estilo arquitetural que organiza uma aplicação como um conjunto de serviços pequenos, independentes e implantáveis de forma autônoma. Cada microsserviço é responsável por um contexto de negócio específico, possui seu próprio ciclo de vida, podendo inclusive utilizar diferentes tecnologias, linguagens e bancos de dados, desde que mantenha interfaces bem definidas.
+
+Esse estilo surgiu como alternativa ao modelo monolítico, trazendo maior escalabilidade, flexibilidade e facilidade de implantação. Cada microsserviço pode ser desenvolvido e escalado separadamente, o que facilita a evolução contínua do sistema, reduz o acoplamento e melhora a capacidade de inovação.
+
+A comunicação entre os microsserviços ocorre normalmente por APIs (geralmente REST ou mensageria assíncrona). Por outro lado, a arquitetura exige maturidade em áreas como monitoramento, testes automatizados, observabilidade, segurança e orquestração, além da necessidade de uma boa governança distribuída.
